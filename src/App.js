@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Head from "./Head";
+import { BrowserRouter,Route } from 'react-router-dom';
+import Bisection from './components/Bisection';
+import FalsePosition from './components/FalsePosition';
+import NewtonRaphson from './components/NewtonRaphson';
+import OnePoint from './components/OnePoint';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Head/>
+        <main>
+          <Route path='/' component={Bisection} exact/>
+          <Route path='/FalsePosition' component={() => <FalsePosition/>}/>
+          <Route path='/OnePoint' component={() => <OnePoint/>}/>
+          <Route path='/NewtonRapshon' component={() => <NewtonRaphson/>}/>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;
+
+
