@@ -10,7 +10,7 @@ const OnePoint =()=>{
         setValuex1(data.map((x)=>x.x1));
         return(
             <Container>
-                <Table striped bordered hover variant="warning">
+                <Table striped bordered variant="warning">
                     <thead>
                         <tr>
                             <th width="50%">Iteration</th>
@@ -105,23 +105,23 @@ const OnePoint =()=>{
             <Container>
                 <div className="background"/>
                 <br></br>
-                <h2 style={{textAlign:"left" ,padding:"20px"}}>One-Point Iteration Methods</h2>
+                <h2>One-Point Iteration Methods</h2>
                 <Form >
-                    <Form.Group className="mb-3" style={{textAlign:"left"}}>
+                    <Form.Group>
                         <Form.Label>Input f(x)</Form.Label>
-                        <input type="text" id="equation" value={Equation} onChange={inputEquation} style={{width:"20%", margin:"15px",display: "inline-block"}} className="form-control"></input>
+                        <input type="text" id="equation" value={Equation} onChange={inputEquation}></input>
                         <br></br>
                         <Form.Label>Input X0</Form.Label>
-                        <input type="number" id="X0" value={X0} onChange={inputX0} style={{width:"20%", margin:"15px",display: "inline-block"}} className="form-control"></input>
+                        <input type="number" id="X0" value={X0} onChange={inputX0}></input>
                     </Form.Group>
-                    <div style={{textAlign:"left",  display: 'block' }}>
-                        <Button variant="danger" style={{margin:"10px" }} onClick={calculateRoot}>
+                    <div>
+                        <Button variant="danger" onClick={calculateRoot}>
                             Calculate
                         </Button>
                     </div>
                 </Form>
                 <br></br>
-                <h5 style={{textAlign:"left"}}>Answer = {X1.toPrecision(7)}</h5>
+                <h5>Answer = {X1.toPrecision(7)}</h5>
                 <Container>
                 {html}
                 </Container>
