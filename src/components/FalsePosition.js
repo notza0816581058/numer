@@ -12,7 +12,7 @@ const FalsePosition =()=>{
         setValueXr(data.map((x)=>x.Xr));
         return(
             <Container>
-                <Table striped bordered hover variant="warning">
+                <Table striped bordered variant="warning">
                     <thead>
                         <tr>
                             <th width="25%">Iteration</th>
@@ -149,25 +149,25 @@ const FalsePosition =()=>{
             <Container>
                 <div className="background"/>
                 <br></br>
-                <h2 style={{textAlign:"left" ,padding:"20px"}}>False-Position Methods</h2>
+                <h2>False-Position Methods</h2>
                 <Form >
                     <Form.Group className="mb-3" style={{textAlign:"left"}}>
                         <Form.Label>Input f(x)</Form.Label>
-                        <input type="text" id="equation" value={Equation} onChange={inputEquation} style={{width:"20%", margin:"15px",display: "inline-block"}} className="form-control"></input>
+                        <input type="text" id="equation" value={Equation} onChange={inputEquation}></input>
                         <br></br>
                         <Form.Label>Input XL</Form.Label>
-                        <input type="number" id="XL" value={XL} onChange={inputXL} style={{width:"20%", margin:"15px",display: "inline-block"}} className="form-control"></input>
+                        <input type="number" id="XL" value={XL} onChange={inputXL}></input>
                         <Form.Label>Input XR</Form.Label>
-                        <input type="number" id="XR" value={XR} onChange={inputXR} style={{width:"20%", margin:"15px",display: "inline-block"}} className="form-control"></input>
+                        <input type="number" id="XR" value={XR} onChange={inputXR}></input>
                     </Form.Group>
-                    <div style={{textAlign:"left",  display: 'block' }}>
-                        <Button variant="danger" style={{margin:"10px" }} onClick={calculateRoot}>
+                    <div>
+                        <Button variant="danger" onClick={calculateRoot}>
                             Calculate
                         </Button>
                     </div>
                 </Form>
                 <br></br>
-                <h5 style={{textAlign:"left"}}>Answer = {X1.toPrecision(7)}</h5>
+                <h5>Answer = {X1.toPrecision(7)}</h5>
                 <Container>
                 {html}
                 </Container>
